@@ -1,0 +1,48 @@
+@media (min-width: 320px) {
+  .main {
+    .about {
+      text-align: center;
+      padding: 30px;
+      p {
+        color: $font-color;
+        font-family: $regular-font;
+      }
+    }
+    .skills {
+      .skills-container {
+        background-color: #1f252d;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 0;
+        &:first-child {
+          position: relative;
+          &::after {
+            content: "";
+            border-bottom: 2px solid white;
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            bottom: 0;
+          }
+        }
+        svg {
+          fill: $white;
+        }
+        p {
+          color: $white;
+          word-spacing: 15px;
+          padding-top: 20px;
+        }
+        ul {
+          padding: 0;
+          text-align: center;
+          li {
+            color: $white;
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+}
