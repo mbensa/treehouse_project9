@@ -1,0 +1,44 @@
+.contact {
+  margin-top: -55px;
+  .contact-container {
+    background-color: #1f252d;
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+    h2 {
+      color: white;
+      font-family: "Overlock", sans-serif;
+      padding-top: 60px;
+      text-align: center;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 30px 20px 30px;
+      input,
+      textarea {
+        background-color: #1d2024;
+        border: none;
+        margin-top: 5px;
+        padding: 10px;
+        color: white;
+        font-family: $regular-font;
+      }
+      button {
+        background-color: #1d2024;
+        color: white;
+        border: none;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 5px;
+        padding: 10px;
+        font-family: $regular-font;
+      }
+    }
+  }
+}
+
+.footer {
+  background: black;
+  display: flex;
+  justify-content: center;
+}

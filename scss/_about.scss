@@ -1,0 +1,42 @@
+.about {
+  background-color: #e4e4e5;
+  padding-bottom: 55px;
+  h2 {
+    font-family: $regular-font;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .about-container {
+    .image-container {
+      display: flex;
+      justify-content: center;
+      img {
+        border-radius: 50%;
+        width: 150px;
+        border: 2px solid #1f252d;
+      }
+    }
+    .text-container {
+      padding: 20px 30px 20px 30px;
+      p {
+        font-family: $regular-font;
+        text-align: center;
+      }
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+
+      button {
+        background-color: #1f252d;
+        border: none;
+        color: white;
+        font-family: $regular-font;
+        padding: 10px;
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
