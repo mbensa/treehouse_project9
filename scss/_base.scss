@@ -21,3 +21,16 @@ body {
 * {
   box-sizing: border-box;
 }
+
+p,
+ul li {
+  font-family: $regular-font;
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+h2 {
+  font-family: $regular-font;
+  text-align: center;
+}

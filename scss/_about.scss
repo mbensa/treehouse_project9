@@ -1,15 +1,18 @@
 .about {
   background-color: #e4e4e5;
   padding-bottom: 55px;
-  h2 {
-    font-family: $regular-font;
-    text-align: center;
-    padding-top: 30px;
-  }
+  display: flex;
+  justify-content: center;
   .about-container {
+    max-width: 1000px;
+    h2 {
+      padding-top: 30px;
+    }
+
     .image-container {
       display: flex;
       justify-content: center;
+      padding-top: 20px;
       img {
         border-radius: 50%;
         width: 150px;
@@ -19,7 +22,6 @@
     .text-container {
       padding: 20px 30px 20px 30px;
       p {
-        font-family: $regular-font;
         text-align: center;
       }
     }

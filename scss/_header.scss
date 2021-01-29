@@ -1,7 +1,6 @@
 .main-bg {
   background-size: cover;
   min-height: 100vh;
-  min-width: 100vw;
   @media (min-width: 1024px) {
     position: fixed;
     bottom: 0;
@@ -54,7 +53,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    min-width: 100vw;
     min-height: 100vh;
     align-items: center;
     @media (min-width: 1024px) {
@@ -72,6 +70,9 @@
       font-size: 1.2rem;
       color: $white;
       font-family: $header-font;
+      @media (min-width: 768px) {
+        font-size: 1.6rem;
+      }
       @media (min-width: 1024px) {
         position: absolute;
         font-size: 1.8rem;
@@ -80,6 +81,9 @@
 
     .name {
       font-size: 2.6rem;
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
       @media (min-width: 1024px) {
         font-size: 5rem;
       }
@@ -88,14 +92,14 @@
     .title {
       position: absolute;
       bottom: 60px;
-      @media (min-width: 1024px) {
-        bottom: 100px;
+      @media (min-width: 768px) {
+        bottom: 150px;
       }
     }
 
     .hi {
       @media (min-width: 1024px) {
-        bottom: 900px;
+        bottom: 1200px;
       }
     }
 

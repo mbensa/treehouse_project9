@@ -2,44 +2,82 @@
   .intro-text {
     text-align: center;
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      padding: 50px;
+    }
+
     p {
       color: $font-color;
-      font-family: $regular-font;
+      max-width: 1000px;
     }
   }
+
   .skills {
-    .skills-container {
-      background-color: #1f252d;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding: 30px 0;
-      &:first-child {
-        position: relative;
-        &::after {
-          content: "";
-          border-bottom: 2px solid white;
-          position: absolute;
-          width: 60%;
-          height: 2px;
-          bottom: 0;
+    position: relative;
+    background-color: #1f252d;
+
+    &::after {
+      content: "";
+      border-bottom: 2px solid white;
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      bottom: 60%;
+      left: 20%;
+      @media (min-width: 768px) {
+        border-bottom: none;
+        border-right: 2px solid white;
+        width: 2px;
+        height: 67%;
+        top: 15%;
+        left: 50%;
+      }
+    }
+    .skills-layout {
+      @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .skills-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 0;
+        @media (min-width: 768px) {
+          padding: 50px 0;
+          flex: 0 0 500px;
         }
-      }
-      svg {
-        fill: $white;
-      }
-      p {
-        color: $white;
-        word-spacing: 15px;
-        padding-top: 20px;
-        font-family: $regular-font;
-      }
-      ul {
-        padding: 0;
-        text-align: center;
-        li {
-          color: $white;
-          list-style-type: none;
+
+        svg {
+          fill: $white;
+        }
+
+        .skills-list,
+        .tools-list {
+          padding: 0;
+          text-align: center;
+          li {
+            color: $white;
+            list-style-type: none;
+          }
+        }
+
+        .skills-list {
+          display: flex;
+          flex-direction: row;
+          @media (min-width: 768px) {
+            flex-direction: column;
+          }
+          li {
+            padding-right: 10px;
+            padding-top: 20px;
+            @media (min-width: 768px) {
+              padding-top: 10px;
+            }
+          }
         }
       }
     }
