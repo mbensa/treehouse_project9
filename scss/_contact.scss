@@ -1,10 +1,10 @@
 .contact {
   margin-top: -55px;
   .contact-container {
-    background-color: #1f252d;
+    background-color: $main-color;
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
     h2 {
-      color: white;
+      color: $white;
       padding-top: 60px;
     }
     .form-layout {
@@ -21,15 +21,15 @@
           border: none;
           margin-top: 5px;
           padding: 10px;
-          color: white;
+          color: $white;
           font-family: $regular-font;
           &:focus {
-            border: 1px solid white;
+            border: 1px solid $white;
           }
         }
         button {
           background-color: #1d2024;
-          color: white;
+          color: $white;
           border: none;
           width: 50%;
           margin: 0 auto;
@@ -37,7 +37,7 @@
           padding: 10px;
           font-family: $regular-font;
           &:focus {
-            border: 1px solid white;
+            border: 1px solid $white;
           }
         }
       }
@@ -46,7 +46,7 @@
 }
 
 .footer {
-  background-color: #1f252d;
+  background-color: $main-color;
   display: flex;
   justify-content: center;
   svg {

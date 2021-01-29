@@ -9,18 +9,18 @@
     }
 
     p {
-      color: $font-color;
+      color: $main-color;
       max-width: 1000px;
     }
   }
 
   .skills {
     position: relative;
-    background-color: #1f252d;
+    background-color: $main-color;
 
     &::after {
       content: "";
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $white;
       position: absolute;
       width: 60%;
       height: 2px;
@@ -28,7 +28,7 @@
       left: 20%;
       @media (min-width: 768px) {
         border-bottom: none;
-        border-right: 2px solid white;
+        border-right: 2px solid $white;
         width: 2px;
         height: 67%;
         top: 15%;

@@ -16,7 +16,7 @@
       img {
         border-radius: 50%;
         width: 150px;
-        border: 2px solid #1f252d;
+        border: 2px solid $main-color;
       }
     }
     .text-container {
@@ -30,9 +30,9 @@
       justify-content: center;
 
       button {
-        background-color: #1f252d;
+        background-color: $main-color;
         border: none;
-        color: white;
+        color: $white;
         font-family: $regular-font;
         padding: 10px;
         &:last-child {
