@@ -531,15 +531,104 @@ h2 {
         justify-content: center;
         max-width: 1000px;
         padding-bottom: 50px; } }
+    .projects .project-screenshots .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      margin: 10px; }
+      @media (min-width: 768px) {
+        .projects .project-screenshots .flip-card {
+          margin: 5px; } }
+      .projects .project-screenshots .flip-card .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d; }
+        .projects .project-screenshots .flip-card .flip-card-inner .front,
+        .projects .project-screenshots .flip-card .flip-card-inner .back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden; }
+        .projects .project-screenshots .flip-card .flip-card-inner .back {
+          background-color: #1f252d;
+          color: white;
+          transform: rotateY(180deg);
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center; }
+          .projects .project-screenshots .flip-card .flip-card-inner .back p {
+            padding: 20px 20px 50px 20px; }
+          .projects .project-screenshots .flip-card .flip-card-inner .back button {
+            border: 2px solid white;
+            background: none;
+            color: white;
+            padding: 15px; }
+    .projects .project-screenshots .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg); }
     .projects .project-screenshots img {
       border: 1px solid #dad7d7;
       box-shadow: 4px 4px 4px #999;
-      margin: 10px 0;
-      width: 75%; }
+      width: 100%; }
+
+.project-overlay {
+  display: flex;
+  justify-content: center; }
+  .project-overlay .modal {
+    position: relative; }
+    .project-overlay .modal .modal-close {
+      position: absolute;
+      cursor: pointer;
+      border: none;
+      right: 5px;
+      top: 5px;
+      background-color: white; }
+    .project-overlay .modal .modal-content {
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px; }
       @media (min-width: 768px) {
-        .projects .project-screenshots img {
-          width: 300px;
-          margin: 10px; } }
+        .project-overlay .modal .modal-content {
+          max-width: 800px; } }
+      .project-overlay .modal .modal-content img {
+        max-width: 200px;
+        margin-bottom: 20px; }
+        @media (min-width: 768px) {
+          .project-overlay .modal .modal-content img {
+            max-width: 700px;
+            margin-bottom: 30px; } }
+      .project-overlay .modal .modal-content p {
+        text-align: center;
+        margin-bottom: 20px; }
+        @media (min-width: 768px) {
+          .project-overlay .modal .modal-content p {
+            margin-bottom: 30px; } }
+      .project-overlay .modal .modal-content hr {
+        width: 100px;
+        margin-bottom: 20px;
+        background-color: grey;
+        border: none;
+        height: 1px; }
+        @media (min-width: 768px) {
+          .project-overlay .modal .modal-content hr {
+            width: 400px;
+            margin-bottom: 30px; } }
+      .project-overlay .modal .modal-content button {
+        margin-bottom: 20px;
+        border: none;
+        background: #1f252d;
+        color: white;
+        padding: 10px; }
+        @media (min-width: 768px) {
+          .project-overlay .modal .modal-content button {
+            margin-bottom: 30px;
+            padding: 20px 50px; } }
 
 .about {
   background-color: #e4e4e5;
@@ -581,7 +670,7 @@ h2 {
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); }
     .contact .contact-container h2 {
       color: white;
-      padding-top: 60px; }
+      padding-top: 80px; }
     .contact .contact-container .form-layout {
       max-width: 700px;
       margin: 0 auto; }
