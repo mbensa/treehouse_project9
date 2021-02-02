@@ -1,3 +1,4 @@
+/****************Display Video***************/
 window.onload = manageAutoplay();
 
 function manageAutoplay() {
@@ -15,3 +16,13 @@ function manageAutoplay() {
 }
 
 window.addEventListener("resize", manageAutoplay);
+
+/***********Display Modal Windown**********/
+const overlay = document.querySelector(".project-overlay");
+const modalClose = document.querySelector(".modal-close");
+const modalContainer = document.querySelector(".modal-content");
+const cardButton = document.querySelector(".flip-card-button");
+
+cardButton.addEventListener("click", () => {
+  overlay.classList.remove("hidden");
+});

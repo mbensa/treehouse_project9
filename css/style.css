@@ -630,6 +630,17 @@ h2 {
             margin-bottom: 30px;
             padding: 20px 50px; } }
 
+.hidden {
+  display: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4); }
+
 .about {
   background-color: #e4e4e5;
   padding-bottom: 55px;
@@ -701,6 +712,8 @@ h2 {
           font-family: "Overlock", sans-serif; }
           .contact .contact-container .form-layout .contact-form button:focus {
             border: 1px solid white; }
+        .contact .contact-container .form-layout .contact-form #text-area {
+          height: 100px; }
 
 .footer {
   background-color: #1f252d;
