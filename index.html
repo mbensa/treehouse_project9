@@ -20,11 +20,11 @@
 
   <body>
     <div class="main-bg">
-      <section class="video-container">
+      <div class="video-container">
         <video preload="none" muted loop id="myVideo">
-          <source src="video/Pexels Videos 946146.mp4" type=video/mp4>
+          <source src="video/video.m4v" type=video/mp4>
         </video>
-      </section>
+      </div>
       <div id="overlay"></div>
       <section class="content">
         <p class="hi">Hi! Nice to meet you.</p>
@@ -147,7 +147,9 @@
                 </div>
                 <div class="back">
                   <p>Mobile-First Responsive Layout</p>
-                  <button class="flip-card-button">DETAILS</button>
+                  <button class="flip-card-button" data-modalId="one">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -161,7 +163,9 @@
                 </div>
                 <div class="back">
                   <p>Online Registration Form</p>
-                  <button>DETAILS</button>
+                  <button class="flip-card-button" data-modalId="two">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -175,7 +179,9 @@
                 </div>
                 <div class="back">
                   <p>Web Style Guide</p>
-                  <button>DETAILS</button>
+                  <button class="flip-card-button" data-modalId="three">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -189,7 +195,9 @@
                 </div>
                 <div class="back">
                   <p>Interactive Photo Gallery</p>
-                  <button>DETAILS</button>
+                  <button class="flip-card-button" data-modalId="four">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -203,7 +211,9 @@
                 </div>
                 <div class="back">
                   <p>Game Show App</p>
-                  <button>DETAILS</button>
+                  <button class="flip-card-button" data-modalId="five">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -217,7 +227,9 @@
                 </div>
                 <div class="back">
                   <p>WebApp Dashboard</p>
-                  <button>DETAILS</button>
+                  <button class="flip-card-button" data-modalId="six">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -231,7 +243,9 @@
                 </div>
                 <div class="back">
                   <p>Employee Directory</p>
-                  <button>DETAILS</button>
+                  <button class="flip-card-button" data-modalId="seven">
+                    DETAILS
+                  </button>
                 </div>
               </div>
             </div>
@@ -239,11 +253,11 @@
         </section>
 
         <section class="project-overlay hidden">
-          <div class="modal">
+          <div class="modal" hidden id="one">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>MOBILE-FIRST RESPONSIVE LAYOUT</p>
-              <img src="image/project_2_overlay.jpg" />
+              <img src="image/project_2_overlay.jpg" alt="project screenshot" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Repudiandae, dolorum aliquid qui accusamus animi expedita est,
@@ -255,7 +269,7 @@
               <button>VIEW PROJECT</button>
             </div>
           </div>
-          <div class="modal">
+          <div class="modal" hidden id="two">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>ONLINE REGISTRATION FORM</p>
@@ -271,7 +285,7 @@
               <button>VIEW PROJECT</button>
             </div>
           </div>
-          <div class="modal">
+          <div class="modal" hidden id="three">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>WEB STYLE GUIDE</p>
@@ -287,7 +301,7 @@
               <button>VIEW PROJECT</button>
             </div>
           </div>
-          <div class="modal">
+          <div class="modal" hidden id="four">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>INTERACTIVE PHOTO GALLERY</p>
@@ -303,7 +317,7 @@
               <button>VIEW PROJECT</button>
             </div>
           </div>
-          <div class="modal">
+          <div class="modal" hidden id="five">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>GAME SHOW APP</p>
@@ -319,7 +333,7 @@
               <button>VIEW PROJECT</button>
             </div>
           </div>
-          <div class="modal">
+          <div class="modal" hidden id="six">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>WEBAPP DASHBOARD</p>
@@ -335,7 +349,7 @@
               <button>VIEW PROJECT</button>
             </div>
           </div>
-          <div class="modal">
+          <div class="modal" hidden id="seven">
             <button class="modal-close">X</button>
             <div class="modal-content">
               <p>EMPLOYEE DIRECTORY</p>
@@ -446,6 +460,6 @@
     </footer>
 
     <script src="js/jquery-3.5.0.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

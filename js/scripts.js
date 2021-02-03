@@ -18,11 +18,15 @@ function manageAutoplay() {
 window.addEventListener("resize", manageAutoplay);
 
 /***********Display Modal Windown**********/
-const overlay = document.querySelector(".project-overlay");
-const modalClose = document.querySelector(".modal-close");
-const modalContainer = document.querySelector(".modal-content");
-const cardButton = document.querySelector(".flip-card-button");
+const projectsSection = document.querySelector(".project-screenshots");
 
-cardButton.addEventListener("click", () => {
-  overlay.classList.remove("hidden");
+projectsSection.addEventListener("click", (e) => {
+  if (e.target.localName === "button") {
+    const modalId = e.target.dataset.modalid;
+    displayProject(modalId);
+  }
 });
+
+function displayProject(modalId) {
+  const projectOverlay = document.querySelector(".project-overlay");
+}

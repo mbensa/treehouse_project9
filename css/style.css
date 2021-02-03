@@ -434,7 +434,7 @@ h2 {
           bottom: 150px; } }
     @media (min-width: 1024px) {
       .main-bg .content .hi {
-        bottom: 1200px; } }
+        top: 300px; } }
     .main-bg .content .arrow-container {
       position: absolute;
       bottom: 10px; }
@@ -576,15 +576,26 @@ h2 {
 
 .project-overlay {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.7); }
   .project-overlay .modal {
-    position: relative; }
+    position: relative;
+    background-color: white;
+    display: flex;
+    max-height: 900px;
+    border-radius: 5%; }
     .project-overlay .modal .modal-close {
       position: absolute;
       cursor: pointer;
       border: none;
-      right: 5px;
-      top: 5px;
+      right: 25px;
+      top: 25px;
       background-color: white; }
     .project-overlay .modal .modal-content {
       max-width: 250px;
@@ -601,14 +612,15 @@ h2 {
         margin-bottom: 20px; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content img {
-            max-width: 700px;
+            max-width: 500px;
             margin-bottom: 30px; } }
       .project-overlay .modal .modal-content p {
         text-align: center;
-        margin-bottom: 20px; }
+        margin: 0 30px 20px 30px; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content p {
-            margin-bottom: 30px; } }
+            margin-bottom: 30px;
+            font-size: 1.2rem; } }
       .project-overlay .modal .modal-content hr {
         width: 100px;
         margin-bottom: 20px;
@@ -632,14 +644,6 @@ h2 {
 
 .hidden {
   display: none; }
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(100, 100, 100, 0.4); }
 
 .about {
   background-color: #e4e4e5;
@@ -712,8 +716,6 @@ h2 {
           font-family: "Overlock", sans-serif; }
           .contact .contact-container .form-layout .contact-form button:focus {
             border: 1px solid white; }
-        .contact .contact-container .form-layout .contact-form #text-area {
-          height: 100px; }
 
 .footer {
   background-color: #1f252d;

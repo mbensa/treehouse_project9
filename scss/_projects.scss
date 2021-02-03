@@ -77,14 +77,25 @@
 .project-overlay {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.7);
   .modal {
     position: relative;
+    background-color: $white;
+    display: flex;
+    max-height: 900px;
+    border-radius: 5%;
     .modal-close {
       position: absolute;
       cursor: pointer;
       border: none;
-      right: 5px;
-      top: 5px;
+      right: 25px;
+      top: 25px;
       background-color: $white;
     }
     .modal-content {
@@ -101,15 +112,16 @@
         max-width: 200px;
         margin-bottom: 20px;
         @media (min-width: 768px) {
-          max-width: 700px;
+          max-width: 500px;
           margin-bottom: 30px;
         }
       }
       p {
         text-align: center;
-        margin-bottom: 20px;
+        margin: 0 30px 20px 30px;
         @media (min-width: 768px) {
           margin-bottom: 30px;
+          font-size: 1.2rem;
         }
       }
       hr {
@@ -140,13 +152,4 @@
 
 .hidden {
   display: none;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(100, 100, 100, 0.4);
 }
