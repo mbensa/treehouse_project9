@@ -84,12 +84,22 @@
   right: 0;
   bottom: 0;
   background: rgba(100, 100, 100, 0.7);
+
+  &.hidden {
+    display: none;
+  }
+
   .modal {
     position: relative;
     background-color: $white;
     display: flex;
     max-height: 900px;
     border-radius: 5%;
+
+    &.hidden {
+      display: none;
+    }
+
     .modal-close {
       position: absolute;
       cursor: pointer;
@@ -148,8 +158,4 @@
       }
     }
   }
-}
-
-.hidden {
-  display: none;
 }

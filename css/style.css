@@ -584,12 +584,16 @@ h2 {
   right: 0;
   bottom: 0;
   background: rgba(100, 100, 100, 0.7); }
+  .project-overlay.hidden {
+    display: none; }
   .project-overlay .modal {
     position: relative;
     background-color: white;
     display: flex;
     max-height: 900px;
     border-radius: 5%; }
+    .project-overlay .modal.hidden {
+      display: none; }
     .project-overlay .modal .modal-close {
       position: absolute;
       cursor: pointer;
@@ -641,9 +645,6 @@ h2 {
           .project-overlay .modal .modal-content button {
             margin-bottom: 30px;
             padding: 20px 50px; } }
-
-.hidden {
-  display: none; }
 
 .about {
   background-color: #e4e4e5;

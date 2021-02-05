@@ -4,6 +4,7 @@ window.onload = manageAutoplay();
 function manageAutoplay() {
   const videoLocation = document.getElementById("myVideo");
   const container = document.querySelector(".video-container");
+
   if (window.innerWidth > 1024) {
     videoLocation.removeAttribute("preload");
     videoLocation.setAttribute("autoplay", "");
@@ -29,4 +30,14 @@ projectsSection.addEventListener("click", (e) => {
 
 function displayProject(modalId) {
   const projectOverlay = document.querySelector(".project-overlay");
+  const modal = document.getElementById(modalId);
+  const close = modal.querySelector(".modal-close");
+
+  projectOverlay.classList.remove("hidden");
+  modal.classList.remove("hidden");
+
+  close.addEventListener("click", () => {
+    projectOverlay.classList.add("hidden");
+    modal.classList.add("hidden");
+  });
 }
