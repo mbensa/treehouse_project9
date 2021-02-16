@@ -3,20 +3,26 @@
     text-align: center;
     padding: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     @media (min-width: 768px) {
       padding: 50px;
     }
 
     p {
       color: $main-color;
-      max-width: 1000px;
+      max-width: 800px;
+      &:last-child {
+        margin-top: 15px;
+      }
     }
   }
 
   .skills {
     position: relative;
     background-color: $main-color;
+    display: flex;
+    justify-content: center;
 
     &::after {
       content: "";
@@ -40,6 +46,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        width: 1000px;
       }
       .skills-container {
         display: flex;
@@ -48,7 +55,7 @@
         padding: 30px 0;
         @media (min-width: 768px) {
           padding: 50px 0;
-          flex: 0 0 500px;
+          flex: 0 0 50%;
         }
 
         svg {

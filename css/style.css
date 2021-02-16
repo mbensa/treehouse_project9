@@ -445,17 +445,22 @@ h2 {
   text-align: center;
   padding: 30px;
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  align-items: center; }
   @media (min-width: 768px) {
     .main .intro-text {
       padding: 50px; } }
   .main .intro-text p {
     color: #1f252d;
-    max-width: 1000px; }
+    max-width: 800px; }
+    .main .intro-text p:last-child {
+      margin-top: 15px; }
 
 .main .skills {
   position: relative;
-  background-color: #1f252d; }
+  background-color: #1f252d;
+  display: flex;
+  justify-content: center; }
   .main .skills::after {
     content: "";
     border-bottom: 2px solid white;
@@ -476,7 +481,8 @@ h2 {
     .main .skills .skills-layout {
       display: flex;
       flex-direction: row;
-      justify-content: center; } }
+      justify-content: center;
+      width: 1000px; } }
   .main .skills .skills-layout .skills-container {
     display: flex;
     align-items: center;
@@ -485,7 +491,7 @@ h2 {
     @media (min-width: 768px) {
       .main .skills .skills-layout .skills-container {
         padding: 50px 0;
-        flex: 0 0 500px; } }
+        flex: 0 0 50%; } }
     .main .skills .skills-layout .skills-container svg {
       fill: white; }
     .main .skills .skills-layout .skills-container .skills-list,
@@ -566,7 +572,8 @@ h2 {
             border: 2px solid white;
             background: none;
             color: white;
-            padding: 15px; }
+            padding: 15px;
+            cursor: pointer; }
     .projects .project-screenshots .flip-card:hover .flip-card-inner {
       transform: rotateY(180deg); }
     .projects .project-screenshots img {
@@ -590,17 +597,38 @@ h2 {
     position: relative;
     background-color: white;
     display: flex;
-    max-height: 900px;
-    border-radius: 5%; }
+    max-height: 900px; }
     .project-overlay .modal.hidden {
       display: none; }
     .project-overlay .modal .modal-close {
       position: absolute;
       cursor: pointer;
       border: none;
-      right: 25px;
-      top: 25px;
-      background-color: white; }
+      background-color: white;
+      right: 15px;
+      top: 5px;
+      opacity: 0.3;
+      padding: 0; }
+      @media (min-width: 768px) {
+        .project-overlay .modal .modal-close {
+          right: 30px;
+          top: 20px; } }
+      .project-overlay .modal .modal-close:hover {
+        opacity: 1; }
+      .project-overlay .modal .modal-close:before, .project-overlay .modal .modal-close:after {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 2px;
+        background-color: #333; }
+        @media (min-width: 768px) {
+          .project-overlay .modal .modal-close:before, .project-overlay .modal .modal-close:after {
+            height: 20px;
+            width: 2px; } }
+      .project-overlay .modal .modal-close:before {
+        transform: rotate(45deg); }
+      .project-overlay .modal .modal-close:after {
+        transform: rotate(-45deg); }
     .project-overlay .modal .modal-content {
       max-width: 250px;
       display: flex;
@@ -610,31 +638,29 @@ h2 {
       margin: 10px; }
       @media (min-width: 768px) {
         .project-overlay .modal .modal-content {
-          max-width: 800px; } }
+          max-width: 800px;
+          padding: 0 50px; } }
       .project-overlay .modal .modal-content img {
         max-width: 200px;
         margin-bottom: 20px; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content img {
-            max-width: 500px;
+            max-width: 400px;
             margin-bottom: 30px; } }
       .project-overlay .modal .modal-content p {
         text-align: center;
         margin: 0 30px 20px 30px; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content p {
-            margin-bottom: 30px;
-            font-size: 1.2rem; } }
+            margin: 30px 0; } }
       .project-overlay .modal .modal-content hr {
         width: 100px;
-        margin-bottom: 20px;
-        background-color: grey;
+        background-color: #1f252d;
         border: none;
         height: 1px; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content hr {
-            width: 400px;
-            margin-bottom: 30px; } }
+            width: 400px; } }
       .project-overlay .modal .modal-content button {
         margin-bottom: 20px;
         border: none;
@@ -680,7 +706,7 @@ h2 {
           margin-left: 10px; }
 
 .contact {
-  margin-top: -55px; }
+  margin-top: -58px; }
   .contact .contact-container {
     background-color: #1f252d;
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); }

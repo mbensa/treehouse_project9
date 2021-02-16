@@ -59,6 +59,7 @@
             background: none;
             color: white;
             padding: 15px;
+            cursor: pointer;
           }
         }
       }
@@ -94,7 +95,6 @@
     background-color: $white;
     display: flex;
     max-height: 900px;
-    border-radius: 5%;
 
     &.hidden {
       display: none;
@@ -104,9 +104,36 @@
       position: absolute;
       cursor: pointer;
       border: none;
-      right: 25px;
-      top: 25px;
       background-color: $white;
+      right: 15px;
+      top: 5px;
+      opacity: 0.3;
+      padding: 0;
+      @media (min-width: 768px) {
+        right: 30px;
+        top: 20px;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      &:before,
+      &:after {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 2px;
+        background-color: #333;
+        @media (min-width: 768px) {
+          height: 20px;
+          width: 2px;
+        }
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
     }
     .modal-content {
       max-width: 250px;
@@ -117,12 +144,13 @@
       margin: 10px;
       @media (min-width: 768px) {
         max-width: 800px;
+        padding: 0 50px;
       }
       img {
         max-width: 200px;
         margin-bottom: 20px;
         @media (min-width: 768px) {
-          max-width: 500px;
+          max-width: 400px;
           margin-bottom: 30px;
         }
       }
@@ -130,19 +158,16 @@
         text-align: center;
         margin: 0 30px 20px 30px;
         @media (min-width: 768px) {
-          margin-bottom: 30px;
-          font-size: 1.2rem;
+          margin: 30px 0;
         }
       }
       hr {
         width: 100px;
-        margin-bottom: 20px;
-        background-color: grey;
+        background-color: $main-color;
         border: none;
         height: 1px;
         @media (min-width: 768px) {
           width: 400px;
-          margin-bottom: 30px;
         }
       }
       button {
