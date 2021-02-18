@@ -635,18 +635,31 @@ h2 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 10px; }
+      margin: 10px;
+      /* img {
+        max-width: 200px;
+        margin-bottom: 20px;
+        @media (min-width: 768px) {
+          max-width: 400px;
+          margin-bottom: 30px;
+        }
+      }*/ }
       @media (min-width: 768px) {
         .project-overlay .modal .modal-content {
           max-width: 800px;
           padding: 0 50px; } }
-      .project-overlay .modal .modal-content img {
-        max-width: 200px;
-        margin-bottom: 20px; }
-        @media (min-width: 768px) {
-          .project-overlay .modal .modal-content img {
-            max-width: 400px;
-            margin-bottom: 30px; } }
+      .project-overlay .modal .modal-content .main-carousel {
+        height: 200px;
+        width: 100%; }
+        .project-overlay .modal .modal-content .main-carousel .carousel-cell {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .project-overlay .modal .modal-content .main-carousel .carousel-cell img {
+            display: block;
+            max-height: 100%; }
       .project-overlay .modal .modal-content p {
         text-align: center;
         margin: 0 30px 20px 30px; }
@@ -661,14 +674,15 @@ h2 {
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content hr {
             width: 400px; } }
-      .project-overlay .modal .modal-content button {
+      .project-overlay .modal .modal-content .project-link {
         margin-bottom: 20px;
         border: none;
         background: #1f252d;
         color: white;
-        padding: 10px; }
+        padding: 10px;
+        cursor: pointer; }
         @media (min-width: 768px) {
-          .project-overlay .modal .modal-content button {
+          .project-overlay .modal .modal-content .project-link {
             margin-bottom: 30px;
             padding: 20px 50px; } }
 
@@ -745,15 +759,24 @@ h2 {
             border: 1px solid white; }
 
 .footer {
-  background-color: #1f252d;
-  display: flex;
-  justify-content: center; }
-  .footer svg {
-    width: 8%;
-    height: 8%;
-    margin: 15px 0 15px 0; }
-    @media (min-width: 768px) {
-      .footer svg {
-        width: 50px; } }
-    .footer svg:first-child {
-      margin-right: 15px; }
+  background-color: #1f252d; }
+  .footer .social-media {
+    display: flex;
+    justify-content: center; }
+    .footer .social-media svg {
+      width: 8%;
+      height: 8%;
+      margin: 15px 0 15px 0; }
+      @media (min-width: 768px) {
+        .footer .social-media svg {
+          width: 50px; } }
+      .footer .social-media svg:first-child {
+        margin-right: 15px; }
+  .footer .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; }
+    .footer .copyright p {
+      color: white;
+      font-size: 1rem; }

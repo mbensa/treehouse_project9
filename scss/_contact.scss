@@ -47,17 +47,29 @@
 
 .footer {
   background-color: $main-color;
-  display: flex;
-  justify-content: center;
-  svg {
-    width: 8%;
-    height: 8%;
-    margin: 15px 0 15px 0;
-    @media (min-width: 768px) {
-      width: 50px;
+  .social-media {
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 8%;
+      height: 8%;
+      margin: 15px 0 15px 0;
+      @media (min-width: 768px) {
+        width: 50px;
+      }
+      &:first-child {
+        margin-right: 15px;
+      }
     }
-    &:first-child {
-      margin-right: 15px;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    p {
+      color: $white;
+      font-size: 1rem;
     }
   }
 }
