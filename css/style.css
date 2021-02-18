@@ -649,7 +649,7 @@ h2 {
           max-width: 800px;
           padding: 0 50px; } }
       .project-overlay .modal .modal-content .main-carousel {
-        height: 200px;
+        height: 400px;
         width: 100%; }
         .project-overlay .modal .modal-content .main-carousel .carousel-cell {
           height: 100%;
@@ -658,7 +658,6 @@ h2 {
           align-items: center;
           justify-content: center; }
           .project-overlay .modal .modal-content .main-carousel .carousel-cell img {
-            display: block;
             max-height: 100%; }
       .project-overlay .modal .modal-content p {
         text-align: center;

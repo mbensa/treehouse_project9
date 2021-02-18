@@ -40,13 +40,12 @@ function displayProject(modalId) {
     projectOverlay.classList.add("hidden");
     modal.classList.add("hidden");
   });
-}
 
-/****Initialize Flickity******/
-var flkty = new Flickity(".main-carousel", {
-  // options
-  cellAlign: "left",
-  contain: true,
-  setGallerySize: false,
-  pageDots: false,
-});
+  const flkty = new Flickity(".main-carousel", {
+    // options
+    imagesLoaded: true,
+    contain: true,
+    setGallerySize: false,
+    pageDots: false,
+  });
+}
