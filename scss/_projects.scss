@@ -141,24 +141,15 @@
       flex-direction: column;
       align-items: center;
       margin: 10px;
+      @media (min-width: 768px) {
+        max-width: 450px;
+      }
       @media (min-width: 1024px) {
         max-width: 820px;
         padding: 0 50px;
       }
-      .main-carousel {
-        height: 400px;
-        width: 820px;
-
-        .carousel-cell {
-          display: flex;
-          align-items: center;
-          height: 100%;
-          width: 100%;
-
-          img {
-            max-height: 100%;
-          }
-        }
+      img {
+        max-height: 100%;
       }
 
       p {

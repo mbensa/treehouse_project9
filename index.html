@@ -276,7 +276,20 @@
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>ONLINE REGISTRATION FORM</p>
-              <img src="image/project_3_overlay.jpg" />
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="image/project_3_mobile_1.jpg"
+                />
+                <img src="image/project_3_overlay.jpg" />
+              </picture>
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="image/project_3_mobile_2.jpg"
+                />
+                <img src="image/project_3_overlay_2.jpg" />
+              </picture>
               <p>
                 This project demonstrates a responsive, mobile-first
                 registration form using a variety of HTML form input types and
