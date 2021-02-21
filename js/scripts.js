@@ -40,12 +40,4 @@ function displayProject(modalId) {
     projectOverlay.classList.add("hidden");
     modal.classList.add("hidden");
   });
-
-  const flkty = new Flickity(".main-carousel", {
-    // options
-    imagesLoaded: true,
-    contain: true,
-    setGallerySize: false,
-    pageDots: false,
-  });
 }
