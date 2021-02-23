@@ -5,7 +5,6 @@
     <title>My Personal Webpage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/flickity.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
@@ -261,7 +260,37 @@
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>MOBILE-FIRST RESPONSIVE LAYOUT</p>
-              <img src="image/project_3_overlay.jpg" alt="project screenshot" />
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_2_mobile_1.jpg"
+                    />
+                    <img src="image/project_2_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_2_mobile_2.jpg"
+                    />
+                    <img src="image/project_2_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_2_mobile_3.jpg"
+                    />
+                    <img src="image/project_2_overlay_3.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 This project demonstrates a simple mobile-first web page with a
                 responsive layout that adjusts to small, medium, and large
@@ -276,20 +305,28 @@
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>ONLINE REGISTRATION FORM</p>
-              <picture>
-                <source
-                  media="(max-width: 768px)"
-                  srcset="image/project_3_mobile_1.jpg"
-                />
-                <img src="image/project_3_overlay.jpg" />
-              </picture>
-              <picture>
-                <source
-                  media="(max-width: 768px)"
-                  srcset="image/project_3_mobile_2.jpg"
-                />
-                <img src="image/project_3_overlay_2.jpg" />
-              </picture>
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_3_mobile_1.jpg"
+                    />
+                    <img src="image/project_3_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_3_mobile_2.jpg"
+                    />
+                    <img src="image/project_3_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 This project demonstrates a responsive, mobile-first
                 registration form using a variety of HTML form input types and
@@ -304,7 +341,37 @@
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>WEB STYLE GUIDE</p>
-              <img src="image/project_2_overlay.jpg" />
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_4_mobile_1.jpg"
+                    />
+                    <img src="image/project_4_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_4_mobile_2.jpg"
+                    />
+                    <img src="image/project_4_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_4_mobile_3.jpg"
+                    />
+                    <img src="image/project_4_overlay_3.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 In this project, I've used Sass to create a style guide that
                 acts as a personal and custom Bootstrap that can be dropped into
@@ -312,28 +379,79 @@
               </p>
               <hr />
               <p>HTML, SASS</p>
-              <button>VIEW PROJECT</button>
+              <button class="project-link">VIEW PROJECT</button>
             </div>
           </div>
           <div class="modal hidden" id="four">
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>INTERACTIVE PHOTO GALLERY</p>
-              <img src="image/project_2_overlay.jpg" />
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_5_mobile_1.jpg"
+                    />
+                    <img src="image/project_5_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_5_mobile_2.jpg"
+                    />
+                    <img src="image/project_5_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 This is an interactive, searchable photo gallery created using
                 HTML, CSS and JavaScript.
               </p>
               <hr />
               <p>HTML, CSS, JAVASCRIPT</p>
-              <button>VIEW PROJECT</button>
+              <button class="project-link">VIEW PROJECT</button>
             </div>
           </div>
           <div class="modal hidden" id="five">
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>GAME SHOW APP</p>
-              <img src="image/project_2_overlay.jpg" />
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_6_mobile_1.jpg"
+                    />
+                    <img src="image/project_6_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_6_mobile_2.jpg"
+                    />
+                    <img src="image/project_6_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_6_mobile_3.jpg"
+                    />
+                    <img src="image/project_6_overlay_3.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 In this project, I've created a browser version of "Wheel of
                 Success", a word guessing game where players click letters from
@@ -341,14 +459,44 @@
               </p>
               <hr />
               <p>HTML, CSS, JAVASCRIPT</p>
-              <button>VIEW PROJECT</button>
+              <button class="project-link">VIEW PROJECT</button>
             </div>
           </div>
           <div class="modal hidden" id="six">
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>WEBAPP DASHBOARD</p>
-              <img src="image/project_2_overlay.jpg" />
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_7_mobile_1.jpg"
+                    />
+                    <img src="image/project_7_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_7_mobile_2.jpg"
+                    />
+                    <img src="image/project_7_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_7_mobile_3.jpg"
+                    />
+                    <img src="image/project_7_overlay_3.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 This project demonstrates an interactive dashboard for a web
                 application using advanced web techniques including SVG graphics
@@ -358,21 +506,42 @@
               </p>
               <hr />
               <p>HTML, SASS, JAVASCRIPT</p>
-              <button>VIEW PROJECT</button>
+              <button class="project-link">VIEW PROJECT</button>
             </div>
           </div>
           <div class="modal hidden" id="seven">
             <button class="modal-close"></button>
             <div class="modal-content">
               <p>EMPLOYEE DIRECTORY</p>
-              <img src="image/project_2_overlay.jpg" />
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_8_mobile_1.jpg"
+                    />
+                    <img src="image/project_8_overlay.jpg" />
+                  </picture>
+                </div>
+                <div class="mySlides fade">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="image/project_8_mobile_2.jpg"
+                    />
+                    <img src="image/project_8_overlay_2.jpg" />
+                  </picture>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
               <p>
                 In this project, I've used JavaScript to create an employee
                 directory by communicating with a third-party API.
               </p>
               <hr />
               <p>HTML, CSS, JAVASCRIPT</p>
-              <button>VIEW PROJECT</button>
+              <button class="project-link">VIEW PROJECT</button>
             </div>
           </div>
         </section>
@@ -380,20 +549,23 @@
         <section class="about">
           <div class="about-container">
             <h2>WHO AM I?</h2>
-
-            <div class="image-container">
-              <img src="image/my_pic.jpg" alt="my picture" />
-            </div>
-            <div class="text-container">
-              <p>
-                I've been passionate about computer science since I was a kid. A
-                couple of years back, I've discovered the beauty of web
-                development and I've been hooked ever since.
-              </p>
-            </div>
-            <div class="button-container">
-              <button hidden>CV</button>
-              <button hidden>Treehouse Certificate</button>
+            <div class="container">
+              <div class="image-container">
+                <img src="image/my_pic.jpg" alt="my picture" />
+              </div>
+              <div class="text-container">
+                <p>
+                  I've been passionate about computer science since I was a kid.
+                  A couple of years back, I've discovered the beauty of web
+                  development and I've been hooked ever since. All the projects
+                  above have been a part of the Treehouse Front-End Web
+                  Development Techdegree, which I have recently completed.
+                </p>
+                <div class="button-container">
+                  <button>CV</button>
+                  <button>Treehouse Certificate</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -401,6 +573,7 @@
         <section class="contact">
           <div class="contact-container">
             <h2>CONTACT</h2>
+            <p>Have a question? Want to work with me?</p>
             <div class="form-layout">
               <form
                 class="contact-form"
@@ -473,7 +646,6 @@
         </svg>
       </div>
       <div class="copyright">
-        <p>Mojca&copy;2021</p>
         <p>
           Icons made by
           <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
@@ -483,7 +655,6 @@
       </div>
     </footer>
     <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/flickity.pkgd.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

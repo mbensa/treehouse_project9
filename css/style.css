@@ -335,11 +335,13 @@ body {
   box-sizing: border-box; }
 
 p,
-ul li {
+ul li,
+button {
   font-family: "Overlock", sans-serif; }
   @media (min-width: 768px) {
     p,
-    ul li {
+    ul li,
+    button {
       font-size: 1.4rem; } }
 
 h2 {
@@ -590,7 +592,8 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(100, 100, 100, 0.7); }
+  background: rgba(100, 100, 100, 0.7);
+  z-index: 100; }
   .project-overlay.hidden {
     display: none; }
   .project-overlay .modal {
@@ -605,14 +608,20 @@ h2 {
       cursor: pointer;
       border: none;
       background-color: white;
-      right: 15px;
-      top: 5px;
+      right: 0;
+      top: 0;
       opacity: 0.3;
-      padding: 0; }
+      padding: 0;
+      width: 38px;
+      height: 28px; }
       @media (min-width: 768px) {
         .project-overlay .modal .modal-close {
-          right: 30px;
-          top: 20px; } }
+          right: 15px;
+          top: 5px;
+          width: 40px;
+          height: 40px; } }
+      .project-overlay .modal .modal-close:focus {
+        outline: none; }
       .project-overlay .modal .modal-close:hover {
         opacity: 1; }
       .project-overlay .modal .modal-close:before, .project-overlay .modal .modal-close:after {
@@ -630,34 +639,84 @@ h2 {
       .project-overlay .modal .modal-close:after {
         transform: rotate(-45deg); }
     .project-overlay .modal .modal-content {
-      max-width: 250px;
+      max-width: 300px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin: 10px; }
+      align-items: center; }
       @media (min-width: 768px) {
         .project-overlay .modal .modal-content {
           max-width: 450px; } }
       @media (min-width: 1024px) {
         .project-overlay .modal .modal-content {
-          max-width: 820px;
-          padding: 0 50px; } }
-      .project-overlay .modal .modal-content img {
-        max-height: 100%; }
+          max-width: 820px; } }
+      .project-overlay .modal .modal-content .slideshow-container {
+        max-width: 820px;
+        position: relative; }
+        .project-overlay .modal .modal-content .slideshow-container .mySlides {
+          display: none; }
+          .project-overlay .modal .modal-content .slideshow-container .mySlides picture img {
+            max-width: 100%; }
+        .project-overlay .modal .modal-content .slideshow-container .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+        .project-overlay .modal .modal-content .slideshow-container .prev,
+        .project-overlay .modal .modal-content .slideshow-container .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 7px;
+          margin-left: -25px;
+          margin-right: -25px;
+          color: #1f252d;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none; }
+          @media (min-width: 768px) {
+            .project-overlay .modal .modal-content .slideshow-container .prev,
+            .project-overlay .modal .modal-content .slideshow-container .next {
+              margin: -22px 0 0 0;
+              padding: 16px; } }
+          .project-overlay .modal .modal-content .slideshow-container .prev:hover,
+          .project-overlay .modal .modal-content .slideshow-container .next:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white; }
+        .project-overlay .modal .modal-content .slideshow-container .next {
+          right: 0;
+          border-radius: 3px 0 0 3px; }
       .project-overlay .modal .modal-content p {
         text-align: center;
-        margin: 0 30px 20px 30px; }
+        margin: 30px 30px 20px 30px; }
+        .project-overlay .modal .modal-content p:first-child {
+          font-weight: bold; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content p {
-            margin: 30px 0; } }
+            margin: 30px 50px; } }
       .project-overlay .modal .modal-content hr {
         width: 100px;
         background-color: #1f252d;
         border: none;
-        height: 1px; }
+        height: 1px;
+        margin: 0; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content hr {
-            width: 400px; } }
+            width: 300px; } }
       .project-overlay .modal .modal-content .project-link {
         margin-bottom: 20px;
         border: none;
@@ -679,38 +738,52 @@ h2 {
     max-width: 1000px; }
     .about .about-container h2 {
       padding-top: 30px; }
-    .about .about-container .image-container {
+    @media (min-width: 1024px) {
+      .about .about-container .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; } }
+    .about .about-container .container .image-container {
       display: flex;
       justify-content: center;
       padding-top: 20px; }
-      .about .about-container .image-container img {
+      .about .about-container .container .image-container img {
         border-radius: 50%;
         width: 150px;
         border: 2px solid #1f252d; }
-    .about .about-container .text-container {
+    .about .about-container .container .text-container {
       padding: 20px 30px 20px 30px; }
-      .about .about-container .text-container p {
+      .about .about-container .container .text-container p {
         text-align: center; }
-    .about .about-container .button-container {
+    .about .about-container .container .button-container {
       display: flex;
-      justify-content: center; }
-      .about .about-container .button-container button {
+      justify-content: center;
+      margin-top: 35px; }
+      @media (min-width: 1024px) {
+        .about .about-container .container .button-container {
+          align-items: flex-end; } }
+      .about .about-container .container .button-container button {
         background-color: #1f252d;
         border: none;
         color: white;
         font-family: "Overlock", sans-serif;
-        padding: 10px; }
-        .about .about-container .button-container button:last-child {
+        padding: 12px; }
+        .about .about-container .container .button-container button:last-child {
           margin-left: 10px; }
 
 .contact {
-  margin-top: -58px; }
+  margin-top: -60px; }
   .contact .contact-container {
     background-color: #1f252d;
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); }
     .contact .contact-container h2 {
       color: white;
       padding-top: 80px; }
+    .contact .contact-container p {
+      color: white;
+      text-align: center;
+      padding: 10px 0; }
     .contact .contact-container .form-layout {
       max-width: 700px;
       margin: 0 auto; }

@@ -1,11 +1,16 @@
 .contact {
-  margin-top: -58px;
+  margin-top: -60px;
   .contact-container {
     background-color: $main-color;
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
     h2 {
       color: $white;
       padding-top: 80px;
+    }
+    p {
+      color: $white;
+      text-align: center;
+      padding: 10px 0;
     }
     .form-layout {
       max-width: 700px;

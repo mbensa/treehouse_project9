@@ -8,35 +8,46 @@
     h2 {
       padding-top: 30px;
     }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      padding-top: 20px;
-      img {
-        border-radius: 50%;
-        width: 150px;
-        border: 2px solid $main-color;
+    .container {
+      @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
       }
-    }
-    .text-container {
-      padding: 20px 30px 20px 30px;
-      p {
-        text-align: center;
+      .image-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        img {
+          border-radius: 50%;
+          width: 150px;
+          border: 2px solid $main-color;
+        }
       }
-    }
-    .button-container {
-      display: flex;
-      justify-content: center;
+      .text-container {
+        padding: 20px 30px 20px 30px;
+        p {
+          text-align: center;
+        }
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
 
-      button {
-        background-color: #1f252d;
-        border: none;
-        color: white;
-        font-family: $regular-font;
-        padding: 10px;
-        &:last-child {
-          margin-left: 10px;
+        @media (min-width: 1024px) {
+          align-items: flex-end;
+        }
+        button {
+          background-color: #1f252d;
+          border: none;
+          color: white;
+          font-family: $regular-font;
+          padding: 12px;
+          &:last-child {
+            margin-left: 10px;
+          }
         }
       }
     }
