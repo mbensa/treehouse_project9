@@ -837,3 +837,6 @@ h2 {
     .footer .copyright p {
       color: white;
       font-size: 1rem; }
+      .footer .copyright p a {
+        text-decoration: none;
+        color: white; }
