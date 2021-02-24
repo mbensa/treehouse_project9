@@ -719,10 +719,11 @@ h2 {
             width: 300px; } }
       .project-overlay .modal .modal-content .project-link {
         margin-bottom: 20px;
-        border: none;
         background: #1f252d;
         color: white;
         padding: 10px;
+        text-decoration: none;
+        font-family: "Overlock", sans-serif;
         cursor: pointer; }
         @media (min-width: 768px) {
           .project-overlay .modal .modal-content .project-link {

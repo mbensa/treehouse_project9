@@ -246,10 +246,11 @@
       }
       .project-link {
         margin-bottom: 20px;
-        border: none;
         background: $main-color;
         color: white;
         padding: 10px;
+        text-decoration: none;
+        font-family: $regular-font;
         cursor: pointer;
         @media (min-width: 768px) {
           margin-bottom: 30px;
