@@ -1,3 +1,5 @@
+let slideIndex = 1;
+
 /****************Display Video***************/
 window.onload = manageAutoplay();
 
@@ -28,11 +30,19 @@ projectsSection.addEventListener("click", (e) => {
   }
 });
 
-let slideIndex = 1;
 function displayProject(modalId) {
   const projectOverlay = document.querySelector(".project-overlay");
   const modal = document.getElementById(modalId);
   const close = modal.querySelector(".modal-close");
+  const next = modal.querySelector(".next");
+  const prev = modal.querySelector(".prev");
+
+  next.addEventListener("click", () => {
+    showSlides((slideIndex += 1));
+  });
+  prev.addEventListener("click", () => {
+    showSlides((slideIndex -= 1));
+  });
 
   projectOverlay.classList.remove("hidden");
   modal.classList.remove("hidden");
@@ -40,6 +50,12 @@ function displayProject(modalId) {
   close.addEventListener("click", () => {
     projectOverlay.classList.add("hidden");
     modal.classList.add("hidden");
+    next.removeEventListener("click", () => {
+      showSlides((slideIndex += 1));
+    });
+    prev.removeEventListener("click", () => {
+      showSlides((slideIndex -= 1));
+    });
   });
 
   showSlides(slideIndex);
@@ -69,9 +85,4 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
   }
-}
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
 }
