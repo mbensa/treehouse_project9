@@ -811,7 +811,8 @@ h2 {
           margin: 0 auto;
           margin-top: 5px;
           padding: 10px;
-          font-family: "Overlock", sans-serif; }
+          font-family: "Overlock", sans-serif;
+          cursor: pointer; }
           .contact .contact-container .form-layout .contact-form button:focus {
             border: 1px solid white; }
 
