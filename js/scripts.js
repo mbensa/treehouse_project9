@@ -1,8 +1,6 @@
-let slideIndex = 1;
+"use strict";
 
 /****************Display Video***************/
-window.onload = manageAutoplay();
-
 function manageAutoplay() {
   const videoLocation = document.getElementById("myVideo");
   const container = document.querySelector(".video-container");
@@ -18,71 +16,78 @@ function manageAutoplay() {
   }
 }
 
-window.addEventListener("resize", manageAutoplay);
+/*************Modal Window***********/
+function handleModalWindow() {
+  const projectsSection = document.querySelector(".project-screenshots");
 
-/***********Display Modal Windown**********/
-const projectsSection = document.querySelector(".project-screenshots");
-
-projectsSection.addEventListener("click", (e) => {
-  if (e.target.localName === "button") {
-    const modalId = e.target.dataset.modalid;
-    displayProject(modalId);
+  if (projectsSection) {
+    projectsSection.addEventListener("click", (e) => {
+      if (e.target.localName === "button") {
+        const modalId = e.target.dataset.modalid;
+        displayProject(modalId);
+      }
+    });
   }
-});
+}
 
 function displayProject(modalId) {
+  let slideIndex = 0;
+
   const projectOverlay = document.querySelector(".project-overlay");
   const modal = document.getElementById(modalId);
   const close = modal.querySelector(".modal-close");
   const next = modal.querySelector(".next");
   const prev = modal.querySelector(".prev");
+  const allSlides = modal.getElementsByClassName("mySlides");
 
-  next.addEventListener("click", () => {
-    showSlides((slideIndex += 1));
-  });
-  prev.addEventListener("click", () => {
-    showSlides((slideIndex -= 1));
-  });
+  const showSlide = (index) => {
+    if (index >= allSlides.length) {
+      slideIndex = 0;
+    } else if (index <= -1) {
+      slideIndex = allSlides.length - 1;
+    } else {
+      slideIndex = index;
+    }
+
+    for (let i = 0; i < allSlides.length; i++) {
+      if (slideIndex === i) {
+        allSlides[i].style.display = "block";
+      } else {
+        allSlides[i].style.display = "none";
+      }
+    }
+  };
 
   projectOverlay.classList.remove("hidden");
   modal.classList.remove("hidden");
 
+  next.addEventListener("click", () => {
+    showSlide(slideIndex + 1);
+  });
+  prev.addEventListener("click", () => {
+    showSlide(slideIndex - 1);
+  });
+
   close.addEventListener("click", () => {
     projectOverlay.classList.add("hidden");
     modal.classList.add("hidden");
+
     next.removeEventListener("click", () => {
-      showSlides((slideIndex += 1));
+      showSlide(slideIndex + 1);
     });
     prev.removeEventListener("click", () => {
-      showSlides((slideIndex -= 1));
+      showSlide(slideIndex - 1);
     });
+
+    slideIndex = 0;
   });
 
-  showSlides(slideIndex);
+  showSlide(slideIndex);
 }
 
-function showSlides(n) {
-  const modals = document.querySelectorAll(".modal");
-  let activeModal;
+/*********************Init*******************/
+manageAutoplay();
+handleModalWindow();
 
-  modals.forEach((item) => {
-    if (!item.classList.contains("hidden")) {
-      activeModal = item;
-    }
-  });
-
-  if (activeModal) {
-    var i;
-    var slides = activeModal.getElementsByClassName("mySlides");
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-  }
-}
+/************Global event listeners**********/
+window.addEventListener("resize", manageAutoplay);
