@@ -646,7 +646,7 @@ h2 {
       @media (min-width: 768px) {
         .project-overlay .modal .modal-content {
           max-width: 450px; } }
-      @media (min-width: 1025px) {
+      @media (min-width: 1024px) {
         .project-overlay .modal .modal-content {
           max-width: 820px; } }
       .project-overlay .modal .modal-content .slideshow-container {
