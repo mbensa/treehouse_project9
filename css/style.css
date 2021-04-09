@@ -751,8 +751,7 @@ h2 {
       padding-top: 20px; }
       .about .about-container .container .image-container img {
         border-radius: 50%;
-        width: 150px;
-        border: 2px solid #1f252d; }
+        width: 150px; }
     .about .about-container .container .text-container {
       padding: 20px 30px 20px 30px; }
       .about .about-container .container .text-container p {
@@ -764,13 +763,14 @@ h2 {
       @media (min-width: 1024px) {
         .about .about-container .container .button-container {
           align-items: flex-end; } }
-      .about .about-container .container .button-container button {
+      .about .about-container .container .button-container a {
         background-color: #1f252d;
+        text-decoration: none;
         border: none;
         color: white;
         font-family: "Overlock", sans-serif;
         padding: 12px; }
-        .about .about-container .container .button-container button:last-child {
+        .about .about-container .container .button-container a:last-child {
           margin-left: 10px; }
 
 .contact {

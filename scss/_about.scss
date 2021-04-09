@@ -22,7 +22,6 @@
         img {
           border-radius: 50%;
           width: 150px;
-          border: 2px solid $main-color;
         }
       }
       .text-container {
@@ -39,8 +38,9 @@
         @media (min-width: 1024px) {
           align-items: flex-end;
         }
-        button {
+        a {
           background-color: #1f252d;
+          text-decoration: none;
           border: none;
           color: white;
           font-family: $regular-font;
