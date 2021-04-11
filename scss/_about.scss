@@ -5,9 +5,6 @@
   justify-content: center;
   .about-container {
     max-width: 1000px;
-    h2 {
-      padding-top: 30px;
-    }
     .container {
       @media (min-width: 1024px) {
         display: flex;
@@ -18,14 +15,17 @@
       .image-container {
         display: flex;
         justify-content: center;
-        padding-top: 20px;
+        width: 80%;
+        margin: 0 auto;
+        @media (min-width: 1024px) {
+          width: 100%;
+        }
         img {
-          border-radius: 50%;
-          width: 150px;
+          width: 100%;
         }
       }
       .text-container {
-        padding: 20px 30px 20px 30px;
+        padding: 20px 30px;
         p {
           text-align: center;
         }
@@ -33,7 +33,7 @@
       .button-container {
         display: flex;
         justify-content: center;
-        margin-top: 35px;
+        margin-top: 30px;
 
         @media (min-width: 1024px) {
           align-items: flex-end;
@@ -44,10 +44,7 @@
           border: none;
           color: white;
           font-family: $regular-font;
-          padding: 12px;
-          &:last-child {
-            margin-left: 10px;
-          }
+          padding: 10px;
         }
       }
     }
