@@ -18,7 +18,6 @@ function manageAutoplay() {
 
 /*********************Init*******************/
 manageAutoplay();
-handleModalWindow();
 
 /************Global event listeners**********/
 window.addEventListener("resize", manageAutoplay);
